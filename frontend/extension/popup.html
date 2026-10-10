@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LAICIs Quick Verification Agent</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      width: 380px;
+      min-height: 480px;
+      background: #FFF8EB;
+      color: #281117;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      padding: 16px;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(40, 17, 23, 0.12);
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo {
+      width: 32px;
+      height: 32px;
+      border-radius: 10px;
+      background: #bd2949;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(189, 41, 73, 0.25);
+    }
+    .logo::after {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #fff;
+    }
+    .brand-title {
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+    }
+    .brand-sub {
+      font-size: 9px;
+      font-family: monospace;
+      color: #705059;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .status-pill {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 12px;
+      background: #e2e8f0;
+      color: #475569;
+    }
+    .status-pill.online {
+      background: #dcfce7;
+      color: #166534;
+    }
+    .status-pill.offline {
+      background: #fee2e2;
+      color: #991b1b;
+    }
+    .status-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+
+    /* Tabs */
+    .tabs {
+      display: flex;
+      gap: 4px;
+      margin-top: 12px;
+      background: rgba(40, 17, 23, 0.05);
+      padding: 3px;
+      border-radius: 10px;
+    }
+    .tab-btn {
+      flex: 1;
+      border: 0;
+      background: transparent;
+      padding: 7px 4px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #705059;
+      cursor: pointer;
+      border-radius: 7px;
+      transition: all 0.2s;
+    }
+    .tab-btn.active {
+      background: #fff;
+      color: #bd2949;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+
+    /* Content Panels */
+    .panel {
+      display: none;
+      margin-top: 14px;
+    }
+    .panel.active {
+      display: block;
+    }
+    label {
+      display: block;
+      font-size: 10px;
+      font-weight: 800;
+      color: #705059;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      letter-spacing: 0.5px;
+    }
+    input[type="text"], textarea {
+      width: 100%;
+      padding: 9px 12px;
+      border-radius: 8px;
+      border: 1px solid rgba(40, 17, 23, 0.15);
+      background: #fff;
+      font-size: 12px;
+      color: #281117;
+      outline: none;
+      font-family: inherit;
+    }
+    input[type="text"]:focus, textarea:focus {
+      border-color: #bd2949;
+    }
+    .file-dropzone {
+      border: 2px dashed rgba(40, 17, 23, 0.2);
+      border-radius: 10px;
+      padding: 16px;
+      text-align: center;
+      background: #fff;
+      cursor: pointer;
+      font-size: 11px;
+      color: #705059;
+    }
+    .file-dropzone:hover {
+      border-color: #bd2949;
+      background: #fffaf7;
+    }
+    .btn-action {
+      display: block;
+      width: 100%;
+      margin-top: 10px;
+      padding: 10px 14px;
+      border-radius: 30px;
+      border: 0;
+      background: #255d44;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(37, 93, 68, 0.2);
+      transition: transform 0.1s, background 0.2s;
+    }
+    .btn-action:hover {
+      background: #1e4b37;
+    }
+    .btn-action:disabled {
+      background: #94a3b8;
+      cursor: not-allowed;
+    }
+
+    /* Result Box */
+    .result-box {
+      margin-top: 14px;
+      padding: 12px;
+      border-radius: 10px;
+      background: #fff;
+      border: 1px solid rgba(40, 17, 23, 0.1);
+      display: none;
+    }
+    .result-box.visible {
+      display: block;
+    }
+    .result-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .result-verdict {
+      font-size: 12px;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 6px;
+    }
+    .verdict-safe { background: #dcfce7; color: #166534; }
+    .verdict-warn { background: #fef3c7; color: #92400e; }
+    .verdict-danger { background: #fee2e2; color: #991b1b; }
+
+    .result-score {
+      font-size: 12px;
+      font-weight: 700;
+      color: #475569;
+    }
+    .result-details {
+      font-size: 11px;
+      color: #475569;
+      line-height: 1.4;
+      margin-bottom: 8px;
+    }
+    .result-tools {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-top: 6px;
+    }
+    .tool-badge {
+      font-size: 9px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: #f1f5f9;
+      color: #334155;
+      font-weight: 600;
+    }
+
+    /* Footer Navigation */
+    .footer {
+      display: flex;
+      gap: 8px;
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(40, 17, 23, 0.1);
+    }
+    .btn-link {
+      flex: 1;
+      text-align: center;
+      padding: 8px 10px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      text-decoration: none;
+      color: #281117;
+      background: rgba(40, 17, 23, 0.05);
+      transition: background 0.2s;
+    }
+    .btn-link:hover {
+      background: rgba(40, 17, 23, 0.1);
+    }
+    .btn-link.primary {
+      background: #bd2949;
+      color: #fff;
+    }
+    .btn-link.primary:hover {
+      background: #9d1f3b;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="brand">
+      <div class="logo"></div>
+      <div>
+        <div class="brand-title">LAICIs</div>
+        <div class="brand-sub">Tencent WorkBuddy Agent</div>
+      </div>
+    </div>
+    <div class="status-pill" id="backendStatus">
+      <div class="status-dot"></div>
+      <span id="statusText">Checking...</span>
+    </div>
+  </div>
+
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="tab-url">🌐 Active Page</button>
+    <button class="tab-btn" data-tab="tab-text">💬 Message / Text</button>
+    <button class="tab-btn" data-tab="tab-media">🖼️ Media Scan</button>
+  </div>
+
+  <!-- Tab 1: Current Page URL -->
+  <div class="panel active" id="tab-url">
+    <label for="pageUrlInput">Active Tab URL</label>
+    <input type="text" id="pageUrlInput" placeholder="https://example.com" />
+    <button class="btn-action" id="btnScanUrl">Verify Page Authenticity ↗</button>
+  </div>
+
+  <!-- Tab 2: Text Scam & Mule Check -->
+  <div class="panel" id="tab-text">
+    <label for="textContentInput">Suspicious SMS, WhatsApp or Text</label>
+    <textarea id="textContentInput" rows="3" placeholder="Paste suspicious message, job solicitation, or bank alert..."></textarea>
+    <button class="btn-action" id="btnScanText">Analyze with Gemini & PDRM ↗</button>
+  </div>
+
+  <!-- Tab 3: Media File -->
+  <div class="panel" id="tab-media">
+    <label>Upload Image for Deepfake Detection</label>
+    <input type="file" id="mediaFileInput" accept="image/jpeg,image/png,image/webp" style="display:none;" />
+    <div class="file-dropzone" id="mediaDropzone">
+      <div id="dropzoneText">📁 Click to choose image or drag & drop</div>
+      <small style="display:block;margin-top:4px;color:#94a3b8;">EfficientNetV2 · ELA · Sightengine · Gemini</small>
+    </div>
+    <button class="btn-action" id="btnScanMedia" style="margin-top:10px;" disabled>Run Forensic Inspection ↗</button>
+  </div>
+
+  <!-- Result Container -->
+  <div class="result-box" id="resultBox">
+    <div class="result-header">
+      <span class="result-verdict" id="verdictPill">ANALYZING</span>
+      <span class="result-score" id="scoreDisplay">0%</span>
+    </div>
+    <div class="result-details" id="resultSummary">Executing autonomous multi-model agent pipeline...</div>
+    <div style="font-size:10px;font-weight:700;color:#705059;margin-top:6px;">TOOLS EXECUTED:</div>
+    <div class="result-tools" id="toolsList"></div>
+  </div>
+
+  <div class="footer">
+    <a href="#" class="btn-link" id="linkScanner">Open Studio ↗</a>
+    <a href="#" class="btn-link primary" id="linkDashboard">View Dashboard ↗</a>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+
+.v62-footer{background:#163d2d;color:#fff8eb;padding:27px 4%;font:500 11px 'DM Mono',monospace;letter-spacing:.06em;line-height:1.6}
+#shelf .shelf-card h3{max-width:85%;font-size:clamp(30px,3.4vw,48px)}
+#shelf .shelf-card p{max-width:100%}
+#home .hero-bottom p{max-width:550px}
+@media(max-width:800px){#shelf{display:block!important}#faq{display:block!important}#home{min-height:610px}#shelf .shelf-card{min-height:270px}.v62-footer{padding:24px 6%}}
+@media(prefers-reduced-motion:reduce){.reveal,.reveal-left,.reveal-right,.shelf-card{opacity:1!important;transform:none!important}}

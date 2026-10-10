@@ -1,0 +1,120 @@
+{
+  "name": "LAICIs - WorkBuddy Autonomous Forensic Agent",
+  "version": "2.0.0",
+  "track": "DORMATHON 2026 - Track 2: WorkBuddy Agentic Solutions",
+  "platform": "Tencent WorkBuddy AI Execution Platform",
+  "description": "Autonomous deepfake detection, scam syndicate investigation, and quantifiable Malaysian financial risk assessment agent.",
+  "workflow_engine": {
+    "type": "autonomous_goal_driven_dag",
+    "stages": [
+      {
+        "id": "understand",
+        "name": "Goal & Input Decomposition",
+        "action": "Inspect input MIME type, compute SHA-256 evidence hash, extract user goal and Malaysian context."
+      },
+      {
+        "id": "plan",
+        "name": "Dynamic Tool Planning",
+        "action": "Construct tool execution DAG based on input modality (media vs. url vs. text)."
+      },
+      {
+        "id": "execute",
+        "name": "Parallel & Sequential Tool Invocation",
+        "action": "Dispatch registered WorkBuddy forensic and threat intelligence tools."
+      },
+      {
+        "id": "validate",
+        "name": "Cross-Model Verification & Quality Control",
+        "action": "Verify evidence consistency, detect model discrepancies, enforce SSRF network security."
+      },
+      {
+        "id": "integrate",
+        "name": "Forensic Score & Context Fusion",
+        "action": "Calculate weighted multi-model confidence and cross-reference scammer database."
+      },
+      {
+        "id": "deliver",
+        "name": "Usable Outcome & Limitation Disclosure",
+        "action": "Generate executive findings, honest model limitations, and official escalation steps."
+      },
+      {
+        "id": "financial_risk_assess",
+        "name": "Bank Negara Malaysia (BNM) RM Exposure Quantification",
+        "action": "Calculate exposure in RM, 25% prevention value, risk tier (LOW/MOD/HIGH/CRITICAL), and NSRC 997 playbook."
+      }
+    ]
+  },
+  "registered_tools": [
+    {
+      "tool_id": "local_pytorch_efficientnetv2",
+      "name": "PyTorch EfficientNetV2-S Deepfake Classifier",
+      "execution_type": "local_neural_inference",
+      "model_path": "best_model.pth",
+      "purpose": "Local deep learning classification of AI-generated vs. authentic human imagery."
+    },
+    {
+      "tool_id": "local_ela_analyzer",
+      "name": "Local Error Level Analysis (ELA) Engine",
+      "execution_type": "local_pixel_forensics",
+      "purpose": "JPEG compression error divergence and spatial tampering detection."
+    },
+    {
+      "tool_id": "pdrm_ccid_semak_mule",
+      "name": "PDRM CCID Semak Mule Verification Client",
+      "execution_type": "law_enforcement_registry",
+      "purpose": "Verify bank accounts and telephone numbers against Royal Malaysia Police CCID scam database."
+    },
+    {
+      "tool_id": "domain_inspector",
+      "name": "SSRF-Safe Domain Forensics & Phishing Inspector",
+      "execution_type": "network_security_heuristics",
+      "purpose": "Verify URL safety, brand spoofing, and typosquatting with strict SSRF protection."
+    },
+    {
+      "tool_id": "gemini_scam_analyzer",
+      "name": "Gemini 2.0 Flash Multimodal Scam Inspector",
+      "execution_type": "multimodal_llm_with_heuristic_fallback",
+      "purpose": "Analyze social engineering tactics, urgency pressure, and fraudulent solicitations."
+    },
+    {
+      "tool_id": "financial_risk_assessor",
+      "name": "BNM RMiT Financial Exposure & Prevention Calculator",
+      "execution_type": "statutory_actuarial_formulas",
+      "purpose": "Compute RM financial exposure and 25% loss prevention value across retail, SME, and enterprise tiers."
+    },
+    {
+      "tool_id": "rag_knowledge_base",
+      "name": "WorkBuddy Regulatory RAG Engine",
+      "execution_type": "vector_bm25_retrieval",
+      "purpose": "Retrieve statutory compliance guidance from BNM RMiT, NSRC 997, and MCMC regulations."
+    },
+    {
+      "tool_id": "bnm_rmit_audit_logger",
+      "name": "Cryptographic 7-Field Tamper-Proof Audit Logger",
+      "execution_type": "cryptographic_integrity_chaining",
+      "purpose": "Log SHA-256 hash chained records with HMAC verification signatures."
+    }
+  ],
+  "workbuddy_library_datastores": {
+    "scans_db": {
+      "field_count": 22,
+      "primary_key": "scan_id",
+      "description": "Full forensic telemetry, model outputs, SHA-256 fingerprint, and audit linkage."
+    },
+    "scammers_db": {
+      "field_count": 16,
+      "primary_key": "scammer_id",
+      "description": "Malaysian scam syndicate registry with PDRM CCID case numbers and bank/phone records."
+    },
+    "financial_overview_db": {
+      "field_count": 9,
+      "primary_key": "record_id",
+      "description": "Aggregate statistics of intercepted scams, RM exposure, and loss prevention value."
+    },
+    "audit_trail": {
+      "field_count": 7,
+      "primary_key": "audit_id",
+      "description": "Append-only cryptographic audit trail enforcing BNM RMiT immutability standards."
+    }
+  }
+}

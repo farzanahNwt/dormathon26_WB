@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>LAICIs — Investigation Intelligence Dashboard</title>
+  <link href="styles.css" rel="stylesheet"/>
+  <link href="extra.css" rel="stylesheet"/>
+  <link href="v3.css" rel="stylesheet"/>
+  <link href="v4.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="focused.css"/>
+  <style>
+    .dashboard-container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 90px 24px 60px;
+    }
+    .dash-topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid rgba(37,93,68,0.15);
+      padding-bottom: 18px;
+    }
+    .dash-kicker {
+      font: 700 11px/1 'DM Mono', monospace;
+      letter-spacing: 0.12em;
+      color: var(--leaf);
+      text-transform: uppercase;
+    }
+    .dash-title {
+      font-size: clamp(26px, 3.2vw, 38px);
+      font-weight: 800;
+      color: var(--ink);
+      margin: 6px 0 0;
+      line-height: 1.15;
+    }
+    .dash-meta {
+      font-size: 0.82rem;
+      color: #64748b;
+      margin-top: 6px;
+    }
+    .dash-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .dash-btn {
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+      border: 1px solid transparent;
+    }
+    .dash-btn-primary {
+      background: var(--leaf);
+      color: #fff;
+    }
+    .dash-btn-primary:hover {
+      background: #1a4534;
+    }
+    .dash-btn-secondary {
+      background: #1e3a8a;
+      color: #fff;
+    }
+    .dash-btn-secondary:hover {
+      background: #172554;
+    }
+    .dash-btn-outline {
+      background: #fff;
+      color: var(--ink);
+      border-color: rgba(0,0,0,0.15);
+    }
+    .dash-btn-outline:hover {
+      background: #f8fafc;
+    }
+
+    /* KPI Grid */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .kpi-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 18px 20px;
+      border: 1px solid rgba(0,0,0,0.08);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+    }
+    .kpi-label {
+      font: 700 10.5px/1 'DM Mono', monospace;
+      color: #64748b;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .kpi-val {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 6px 0 2px;
+      line-height: 1.1;
+    }
+    .kpi-sub {
+      font-size: 0.78rem;
+      color: #64748b;
+    }
+
+    /* 2-column Grid */
+    .dash-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 24px;
+    }
+    @media (max-width: 900px) {
+      .dash-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .dash-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 22px;
+      border: 1px solid rgba(0,0,0,0.08);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+      margin-bottom: 24px;
+    }
+    .dash-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      border-bottom: 1px solid #f1f5f9;
+      padding-bottom: 12px;
+    }
+    .dash-card-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 0;
+    }
+    .dash-badge {
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .telemetry-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid #f1f5f9;
+    }
+    .telemetry-row:last-child {
+      border-bottom: none;
+    }
+    .telemetry-name {
+      font-weight: 700;
+      color: #0f172a;
+      font-size: 0.92rem;
+    }
+    .telemetry-detail {
+      font-size: 0.75rem;
+      color: #64748b;
+      margin-top: 2px;
+    }
+    .telemetry-val {
+      text-align: right;
+    }
+
+    .justification-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin-top: 14px;
+    }
+    .justification-title {
+      font: 700 11px/1 'DM Mono', monospace;
+      color: #475569;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .justification-text {
+      font-size: 0.85rem;
+      color: #334155;
+      line-height: 1.5;
+    }
+
+    .hotline-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .hotline-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 12px 14px;
+    }
+    .hotline-num {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 2px 0;
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <a class="wordmark" href="index.html">
+      <span class="logo-mark"></span>
+      <span class="logo-type"><strong>LAICIs</strong><small>Local AI Checker Integration System</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#scanner">Scanner</a>
+      <a class="active" href="results.html">Dashboard</a>
+      <a class="pill black" href="index.html#scanner">New scan ↗</a>
+    </nav>
+    <a class="mobile-scan" href="mobile.html">Scan ↗</a>
+  </header>
+
+  <main class="dashboard-container">
+    <div id="noScanBanner" style="display:none;" class="dash-card">
+      <h2 style="font-size:1.3rem;margin:0 0 8px;">No Active Investigation Found in Browser Cache</h2>
+      <p style="color:#64748b;margin:0 0 16px;">You can run a fresh investigation on the scanner or load a verified historical benchmark case from the LAICIs database.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <a href="index.html#scanner" class="dash-btn dash-btn-primary">Go to Scanner ↗</a>
+        <button id="loadDemoCaseBtn" class="dash-btn dash-btn-outline" style="border:1px solid var(--leaf);color:var(--leaf);cursor:pointer;">Load Verified Benchmark Case ⚡</button>
+      </div>
+    </div>
+
+    <div id="dashboardContent">
+      <div class="dash-topbar">
+        <div>
+          <span class="dash-kicker">LAICIs / FORENSIC INTELLIGENCE DOSSIER</span>
+          <h1 class="dash-title" id="dashVerdictTitle">Loading Investigation...</h1>
+          <div class="dash-meta" id="dashMetaDetails">Target: Media &bull; Audit: Connecting...</div>
+        </div>
+        <div class="dash-actions">
+          <button class="dash-btn dash-btn-primary" id="exportReport">Download BNM Dossier ↓</button>
+          <button class="dash-btn dash-btn-secondary" id="exportPdrmReport">PDRM CCID Dossier ↓</button>
+          <a href="index.html#scanner" class="dash-btn dash-btn-outline">New Scan ↗</a>
+        </div>
+      </div>
+
+      <!-- KPI Ribbon -->
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-label">Statutory Risk Tier</div>
+          <div class="kpi-val" id="kpiRiskTier" style="color:#10b981;">ASSESSING</div>
+          <div class="kpi-sub">BNM RMiT Governance</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Synthetic Confidence</div>
+          <div class="kpi-val" id="kpiConfidence">0.0%</div>
+          <div class="kpi-sub">tf_efficientnetv2_s Composite</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Financial Exposure</div>
+          <div class="kpi-val" id="kpiExposure">RM 0.00</div>
+          <div class="kpi-sub" id="kpiExposureSub">Zero Transaction Context</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Potential Loss Prevented</div>
+          <div class="kpi-val" id="kpiPrevention" style="color:#059669;">RM 0.00</div>
+          <div class="kpi-sub">Early Intervention Value</div>
+        </div>
+      </div>
+
+      <!-- Main 2-Column Layout -->
+      <div class="dash-grid">
+        <!-- Left Column: Evidence & Telemetry -->
+        <div>
+          <!-- Visual Artifacts Card (Shown for Media inputs) -->
+          <div class="dash-card" id="visualArtifactsCard" style="display:none;">
+            <div class="dash-card-header">
+              <h2 class="dash-card-title">Visual Forensic Evidence & ELA Heatmap</h2>
+              <span class="dash-badge" style="background:#e0f2fe;color:#0369a1;">Pixel-Level Verification</span>
+            </div>
+            <div id="visualArtifactsContainer" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:14px;">
+              <!-- Dynamically populated with original and ELA images -->
+            </div>
+          </div>
+
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h2 class="dash-card-title">Multi-Model Forensic Evidence Breakdown</h2>
+              <span class="dash-badge" id="toolsExecutedBadge" style="background:#f1f5f9;color:#0f172a;">3 Tools</span>
+            </div>
+            <div id="forensicTelemetryContainer">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h2 class="dash-card-title">Key Observations & Evidence Findings</h2>
+            </div>
+            <ul id="findingsList" style="margin:0;padding-left:18px;font-size:0.88rem;color:#334155;line-height:1.6;">
+              <!-- Findings -->
+            </ul>
+          </div>
+
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h2 class="dash-card-title">Model Boundaries & Probabilistic Disclosure</h2>
+            </div>
+            <p style="font-size:0.84rem;color:#64748b;line-height:1.55;margin:0 0 10px;">
+              Synthetic media classifiers provide statistical indicators, not definitive legal proof of manipulation. Social messaging compression (e.g. WhatsApp, Telegram) may smooth high-frequency ELA residual traces.
+            </p>
+            <p style="font-size:0.84rem;color:#64748b;line-height:1.55;margin:0;">
+              High-value payments or sensitive corporate data transfers must always be verified through independent, out-of-band communication before execution.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right Column: Financial Justification, Enforcement, Audit -->
+        <div>
+          <!-- Financial Justification Card -->
+          <div class="dash-card" style="border-top:4px solid #10b981;" id="financialCardBorder">
+            <div class="dash-card-header">
+              <h2 class="dash-card-title">Financial Impact Assessment & Justification</h2>
+              <span class="dash-badge" id="financialIntentBadge" style="background:#e0f2fe;color:#0369a1;">Informational</span>
+            </div>
+            
+            <div style="font-size:0.85rem;color:#475569;margin-bottom:6px;">Calculated Monetary Exposure:</div>
+            <div style="font-size:1.9rem;font-weight:800;color:#0f172a;margin-bottom:8px;" id="finExposureDisplay">RM 0.00</div>
+            
+            <div class="justification-box">
+              <div class="justification-title">Methodological Justification</div>
+              <div class="justification-text" id="finJustificationText">
+                Analyzing submitted evidence context...
+              </div>
+            </div>
+
+            <div class="justification-box" style="margin-top:10px;background:#f0fdf4;border-color:#bbf7d0;">
+              <div class="justification-title" style="color:#166534;">Recommended Action</div>
+              <div class="justification-text" id="finAdviceText" style="color:#14532d;">
+                Verify sender through out-of-band channel.
+              </div>
+            </div>
+          </div>
+
+          <!-- Authorities Escalation -->
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h2 class="dash-card-title">Official Malaysian Escalation Hotlines</h2>
+              <span class="dash-badge" style="background:#ecfdf5;color:#059669;">Verified</span>
+            </div>
+            <p style="font-size:0.82rem;color:#64748b;margin:0 0 12px;">If funds or banking credentials were compromised, activate emergency protocols within 24 hours:</p>
+            <div class="hotline-grid">
+              <div class="hotline-card">
+                <div style="font-size:0.7rem;color:#64748b;text-transform:uppercase;font-weight:700;">NSRC Scam Response</div>
+                <div class="hotline-num">997</div>
+                <div style="font-size:0.7rem;color:#64748b;">Rapid bank freeze (24h)</div>
+              </div>
+              <div class="hotline-card">
+                <div style="font-size:0.7rem;color:#64748b;text-transform:uppercase;font-weight:700;">Bank Negara Malaysia</div>
+                <div class="hotline-num" style="font-size:1rem;">1-300-88-5465</div>
+                <div style="font-size:0.7rem;color:#64748b;">BNMTELELINK Fraud</div>
+              </div>
+              <div class="hotline-card">
+                <div style="font-size:0.7rem;color:#64748b;text-transform:uppercase;font-weight:700;">PDRM CCID Infoline</div>
+                <div class="hotline-num" style="font-size:1.1rem;">03-2610 1599</div>
+                <div style="font-size:0.7rem;color:#64748b;">Commercial Crime Balai</div>
+              </div>
+              <div class="hotline-card">
+                <div style="font-size:0.7rem;color:#64748b;text-transform:uppercase;font-weight:700;">MCMC Aduan Portal</div>
+                <div class="hotline-num" style="font-size:1.1rem;">1800-188-030</div>
+                <div style="font-size:0.7rem;color:#64748b;">Takedown & Blocklist</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive RAG Regulatory Knowledge Query -->
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h2 class="dash-card-title">Ask LAICIs Regulatory & Recovery Intelligence</h2>
+              <span class="dash-badge" style="background:#ecfdf5;color:#059669;">RAG Powered</span>
+            </div>
+            <p style="font-size:0.82rem;color:#64748b;margin:0 0 12px;">Query Bank Negara Malaysia RMiT standards, NSRC 997 rapid fund freezing rules, or PDRM CCID reporting procedures:</p>
+            <div style="display:flex;gap:8px;">
+              <input type="text" id="ragQueryInput" placeholder="e.g. What is the 24h golden window rule under BNM RMiT?" style="flex:1;padding:9px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.85rem;outline:none;"/>
+              <button type="button" id="ragQueryBtn" class="dash-btn dash-btn-primary" style="padding:9px 14px;">Ask ↗</button>
+            </div>
+            <div id="ragResultBox" style="display:none;margin-top:12px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:12px;font-size:0.83rem;color:#334155;line-height:1.5;"></div>
+          </div>
+
+          <!-- Cryptographic Chain of Custody -->
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h2 class="dash-card-title">Cryptographic Chain-of-Custody</h2>
+              <span class="dash-badge" style="background:#f1f5f9;color:#0f172a;">BNM RMiT</span>
+            </div>
+            <div style="font-size:0.8rem;color:#475569;line-height:1.6;">
+              <div><strong>Audit ID:</strong> <code id="auditIdDisplay" style="background:#f1f5f9;padding:2px 6px;border-radius:4px;">AUD-PENDING</code></div>
+              <div style="margin-top:4px;word-break:break-all;"><strong>SHA-256 Fingerprint:</strong> <code id="auditHashDisplay" style="background:#f1f5f9;padding:2px 6px;border-radius:4px;font-size:0.75rem;">...</code></div>
+              <div style="margin-top:4px;"><strong>Verification Status:</strong> <span style="color:#059669;font-weight:700;">✓ Tamper-evident Signature Valid</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="v62-footer">
+    LAICIs &bull; Local Artificial Intelligence Checker Integration System &bull; DORMATHON 2026 TRACK 2 &bull; Tencent WorkBuddy Agentic Solutions.
+  </footer>
+
+  <script src="v6-report.js"></script>
+</body>
+</html>

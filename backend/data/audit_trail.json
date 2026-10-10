@@ -1,0 +1,492 @@
+[
+  {
+    "audit_id": "AUD-SCAN-BE6-1791632104",
+    "scan_id": "SCAN-BE6F7DAAC9",
+    "timestamp_iso": "2026-10-10T11:35:04Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_URL",
+    "inputs_hash": "8ad2057b6eed71bff8b30697380db6502ab79d0c0db75a6dfdb937638ad72999",
+    "outputs_hash": "4af06552576fe7b72d15d6e5f5f6e2be4640dcc817a24f0ef6eeb1000c333b59",
+    "verifier_signature": "5a914709251de8b3cbe58d9149a0340fe867e8022937fee04794991060dc7f59"
+  },
+  {
+    "audit_id": "AUD-SCAN-E09-1791632062",
+    "scan_id": "SCAN-E09BD3E2C7",
+    "timestamp_iso": "2026-10-10T11:34:22Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_URL",
+    "inputs_hash": "8ad2057b6eed71bff8b30697380db6502ab79d0c0db75a6dfdb937638ad72999",
+    "outputs_hash": "4af06552576fe7b72d15d6e5f5f6e2be4640dcc817a24f0ef6eeb1000c333b59",
+    "verifier_signature": "04d831b1799ce2797acf406e49447b1e05528d1d719aac3657f80d228cd239dc"
+  },
+  {
+    "audit_id": "AUD-SCAN-9C6-1791631901",
+    "scan_id": "SCAN-9C6DB4253E",
+    "timestamp_iso": "2026-10-10T11:31:41Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_TEXT",
+    "inputs_hash": "d09d06b7d5fb834055cdf226a11f30eb63d618ec7141a6bd7b680df77a70c0e9",
+    "outputs_hash": "1bdbdbb2371c46e3bbed9185190b96e18cd15bd8b67f69cc0f22e16388debdff",
+    "verifier_signature": "aa3700f7f9b6e6dbb51c2ddb57d8f0dcfc444df02710f1fce61a41c1fbbc2ae2"
+  },
+  {
+    "audit_id": "AUD-SCAN-3AC-1791631863",
+    "scan_id": "SCAN-3ACAEBED5F",
+    "timestamp_iso": "2026-10-10T11:31:03Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_MEDIA",
+    "inputs_hash": "3c2887762e989e485b3eff71f8a12b1591b07249a39bdddae02cec3e6551af5b",
+    "outputs_hash": "85ad9813ac45015d84a443ddfb79c6ad7404fa49b4555bfb9ec6bdccf2dfdbfc",
+    "verifier_signature": "12cfe418eaff61919b51a7bbce786dfbe509383015019da7f32f9a1fae4caf8b"
+  },
+  {
+    "audit_id": "AUD-SCAN-F5D-1791631680",
+    "scan_id": "SCAN-F5D9461454",
+    "timestamp_iso": "2026-10-10T11:28:00Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_MEDIA",
+    "inputs_hash": "0c470743db728028628d5b8a710dd48473db71f3bf0ab5bb1e41d0dcb4527a69",
+    "outputs_hash": "0b811449d26774467491db7d4357cfbf682b7119576ab38026cfbcaea950ed01",
+    "verifier_signature": "70be1b5efdecc4bf290d8dd90afabcffbf8cbeb7b6011851f494e7fa0fd45374"
+  },
+  {
+    "audit_id": "AUD-SCAN-E3E-1791631619",
+    "scan_id": "SCAN-E3E2D0F027",
+    "timestamp_iso": "2026-10-10T11:26:59Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_URL",
+    "inputs_hash": "457f0ac0b545cc1b64faee644ada3dcbbf86b882da1322c4018137de8e34ea67",
+    "outputs_hash": "2c7e309fd39b669fb05f34b89e201c47e07e8c2b342fbc334fb3107db21ff42b",
+    "verifier_signature": "dbf294ee4e79d907a7f2344c651aca010520946c74785b22f307b3532293539b"
+  },
+  {
+    "audit_id": "AUD-SCAN-6C2-1791631574",
+    "scan_id": "SCAN-6C238362FA",
+    "timestamp_iso": "2026-10-10T11:26:14Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_URL",
+    "inputs_hash": "8ad2057b6eed71bff8b30697380db6502ab79d0c0db75a6dfdb937638ad72999",
+    "outputs_hash": "4af06552576fe7b72d15d6e5f5f6e2be4640dcc817a24f0ef6eeb1000c333b59",
+    "verifier_signature": "96ff210805c46a61c8f47aea2efdefe18bdaf0feea0b4c675cb0a94cd0adc6cc"
+  },
+  {
+    "audit_id": "AUD-SCAN-7E5-1791631429",
+    "scan_id": "SCAN-7E562924F8",
+    "timestamp_iso": "2026-10-10T11:23:49Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_TEXT",
+    "inputs_hash": "2958075f258d39afa65fc29bb658dbca6b8104acbe80b2981f6fcbb6f1e92169",
+    "outputs_hash": "1bdbdbb2371c46e3bbed9185190b96e18cd15bd8b67f69cc0f22e16388debdff",
+    "verifier_signature": "ae0f1471ff7eebdceed6ff04bacaff39736b5f6a86dbfd34e4bac2c8f157c02d"
+  },
+  {
+    "audit_id": "AUD-SCAN-862-1791631359",
+    "scan_id": "SCAN-8625C89AB0",
+    "timestamp_iso": "2026-10-10T11:22:39Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_TEXT",
+    "inputs_hash": "2958075f258d39afa65fc29bb658dbca6b8104acbe80b2981f6fcbb6f1e92169",
+    "outputs_hash": "e186d9f4a33e47a935b35550e9347abbcecfd47382faa0c3fff7bd05199cef38",
+    "verifier_signature": "13beede8d98eeb7b078f5cb0b252f928d90b8fb12a3741a949ab853e8c20a994"
+  },
+  {
+    "audit_id": "AUD-SCAN-362-1791630308",
+    "scan_id": "SCAN-3629744E01",
+    "timestamp_iso": "2026-10-10T11:05:08Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_MEDIA",
+    "inputs_hash": "e408123289d501b75ca2d5ede3b364fdd319ffcad9e0ef7b5e6c078740eab878",
+    "outputs_hash": "aefcb6abb414f43c2850e71185517a764621988560f64b7140111f4bd71dbe95",
+    "verifier_signature": "e3d3d96ac0af02523db49ba7aa7cf7c189616c3f2d6d50f7188c1ced7f3c45c0"
+  },
+  {
+    "audit_id": "AUD-SCAN-E44-1791630269",
+    "scan_id": "SCAN-E446868903",
+    "timestamp_iso": "2026-10-10T11:04:29Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_MEDIA",
+    "inputs_hash": "e408123289d501b75ca2d5ede3b364fdd319ffcad9e0ef7b5e6c078740eab878",
+    "outputs_hash": "aefcb6abb414f43c2850e71185517a764621988560f64b7140111f4bd71dbe95",
+    "verifier_signature": "43c207fb094063df82e860ca574b26d5b2edf78fc6a482deee2209f4750e22f8"
+  },
+  {
+    "audit_id": "AUD-SCAN-F14-1791630193",
+    "scan_id": "SCAN-F1430E5451",
+    "timestamp_iso": "2026-10-10T11:03:13Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_MEDIA",
+    "inputs_hash": "9bafd982b458e533a468956f5b92b0582ec9087f808557755e8651e662f58d8a",
+    "outputs_hash": "22c23e50eae3ef60e42838ce5d4c54f448d215915b2172e555099b3c1b58b485",
+    "verifier_signature": "d291971e3d9cbb94e718a14938a676c2c9fcc950fa59f29f73f3fc0f4dc19bc0"
+  },
+  {
+    "audit_id": "AUD-SCAN-F11-1791630159",
+    "scan_id": "SCAN-F11AA08ED2",
+    "timestamp_iso": "2026-10-10T11:02:39Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_MEDIA",
+    "inputs_hash": "e408123289d501b75ca2d5ede3b364fdd319ffcad9e0ef7b5e6c078740eab878",
+    "outputs_hash": "22c23e50eae3ef60e42838ce5d4c54f448d215915b2172e555099b3c1b58b485",
+    "verifier_signature": "d47332d8c4b51b86b7b7e1bb1cd42b9d72636255068c0ef32c7c6750151ec9b5"
+  },
+  {
+    "audit_id": "AUD-SCAN-888-1791630087",
+    "scan_id": "SCAN-8883AF0806",
+    "timestamp_iso": "2026-10-10T11:01:27Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_MEDIA",
+    "inputs_hash": "e408123289d501b75ca2d5ede3b364fdd319ffcad9e0ef7b5e6c078740eab878",
+    "outputs_hash": "22c23e50eae3ef60e42838ce5d4c54f448d215915b2172e555099b3c1b58b485",
+    "verifier_signature": "6122b20879f295bae0b53d922e06c05d2701a202eb9c2a287fab970e8a340b00"
+  },
+  {
+    "audit_id": "AUD-SCAN-019-1791630006",
+    "scan_id": "SCAN-019CE62D9E",
+    "timestamp_iso": "2026-10-10T11:00:06Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_MEDIA",
+    "inputs_hash": "e408123289d501b75ca2d5ede3b364fdd319ffcad9e0ef7b5e6c078740eab878",
+    "outputs_hash": "22c23e50eae3ef60e42838ce5d4c54f448d215915b2172e555099b3c1b58b485",
+    "verifier_signature": "71f85badbd3fee510cbfcf36916332c032319c487b22b75c3f4860c5c0a43bcd"
+  },
+  {
+    "audit_id": "AUD-SCAN-326-1791629921",
+    "scan_id": "SCAN-3260B364F7",
+    "timestamp_iso": "2026-10-10T10:58:41Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_MEDIA",
+    "inputs_hash": "cabb31f1caaac3dbdc0b540a0a4d21673a9bff09fbb61a303e9780e625dcd9c3",
+    "outputs_hash": "0b811449d26774467491db7d4357cfbf682b7119576ab38026cfbcaea950ed01",
+    "verifier_signature": "2d69ca6ff0a160a7338445d25f5d20bbbf9991db1d143cd2502c096923974fdd"
+  },
+  {
+    "audit_id": "AUD-SCAN-A44-1791629855",
+    "scan_id": "SCAN-A44CBB5E60",
+    "timestamp_iso": "2026-10-10T10:57:35Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_MEDIA",
+    "inputs_hash": "e408123289d501b75ca2d5ede3b364fdd319ffcad9e0ef7b5e6c078740eab878",
+    "outputs_hash": "22c23e50eae3ef60e42838ce5d4c54f448d215915b2172e555099b3c1b58b485",
+    "verifier_signature": "93ff5789f85a019257d963ce5a886b373933b8d6fdfd27c514d2ac338a4ab1f6"
+  },
+  {
+    "audit_id": "AUD-SCAN-88F-1791629269",
+    "scan_id": "SCAN-88F4B926C3",
+    "timestamp_iso": "2026-10-10T10:47:49Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_TEXT",
+    "inputs_hash": "90e569e882a1bd3334d32c5f1b2dcdfe2df7884246b53dd1530c42ac451aeeac",
+    "outputs_hash": "1bdbdbb2371c46e3bbed9185190b96e18cd15bd8b67f69cc0f22e16388debdff",
+    "verifier_signature": "6c94befc69490d53a59ec539b40478aa44d9cfc09bbb8a839a590c9f7bc5db46"
+  },
+  {
+    "audit_id": "AUD-SCAN-C28-1791628911",
+    "scan_id": "SCAN-C281FE08E2",
+    "timestamp_iso": "2026-10-10T10:41:51Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_URL",
+    "inputs_hash": "37f77dcf446a5740bc389df9a612e3ae07d1e98ef3407e5957ecb409e3971dc4",
+    "outputs_hash": "2c7e309fd39b669fb05f34b89e201c47e07e8c2b342fbc334fb3107db21ff42b",
+    "verifier_signature": "2e4c03a04073291c34b29ec12b8a2652ef4c8fbb971fc7630df565aef70d4901"
+  },
+  {
+    "audit_id": "AUD-SCAN-CB2-1791628875",
+    "scan_id": "SCAN-CB2FCDAE65",
+    "timestamp_iso": "2026-10-10T10:41:15Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_MEDIA",
+    "inputs_hash": "85973b87acec7970e80773c7fe958352d960e72c8c41111198c58354b6d466fa",
+    "outputs_hash": "22c23e50eae3ef60e42838ce5d4c54f448d215915b2172e555099b3c1b58b485",
+    "verifier_signature": "4d8bd6c8c1f869207e998de9104e6cdd9ff7f5f4c8b61ec9864660895f432db5"
+  },
+  {
+    "audit_id": "AUD-SCAN-274-1791628755",
+    "scan_id": "SCAN-2745D55972",
+    "timestamp_iso": "2026-10-10T10:39:15Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_TEXT",
+    "inputs_hash": "90e569e882a1bd3334d32c5f1b2dcdfe2df7884246b53dd1530c42ac451aeeac",
+    "outputs_hash": "1bdbdbb2371c46e3bbed9185190b96e18cd15bd8b67f69cc0f22e16388debdff",
+    "verifier_signature": "b2b1c44bc33430d5db5d58a894bd97f911243932c01b47cea65af7cf766f9ad9"
+  },
+  {
+    "audit_id": "AUD-SCAN-4AC-1791628614",
+    "scan_id": "SCAN-4AC4CC0F61",
+    "timestamp_iso": "2026-10-10T10:36:54Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_MEDIA",
+    "inputs_hash": "c7b909d4e5eb7e0b6aba32717276e20df908e5a7c74d13d8de12773830b39341",
+    "outputs_hash": "22c23e50eae3ef60e42838ce5d4c54f448d215915b2172e555099b3c1b58b485",
+    "verifier_signature": "2dd2ee72694cddd2867a20363d9e4242844e21839327f4aaca6706c5e62974ff"
+  },
+  {
+    "audit_id": "AUD-SCAN-7FE-1791628001",
+    "scan_id": "SCAN-7FE2BFA607",
+    "timestamp_iso": "2026-10-10T10:26:41Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_URL",
+    "inputs_hash": "99cd95a4dc7008f396158c0792bc5c81d51adf05f6fd1a60a235cb430669a151",
+    "outputs_hash": "2c7e309fd39b669fb05f34b89e201c47e07e8c2b342fbc334fb3107db21ff42b",
+    "verifier_signature": "bdaea25edfb3aedde03227d825491ba1d633825a183a9ecd9e0ae55d10937a10"
+  },
+  {
+    "audit_id": "AUD-SCAN-FA2-1791627697",
+    "scan_id": "SCAN-FA295A3452",
+    "timestamp_iso": "2026-10-10T10:21:37Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_URL",
+    "inputs_hash": "987d4b6c0d199af2a908b871cffe73c794866f8bbc7295c218d3e9533ff459e1",
+    "outputs_hash": "0d60bd7b1143cc317e03eeddd4db4531fbeff6596250592090849933745caaef",
+    "verifier_signature": "ceab45311386787f619d5230b9fa5ae31b6b7f19c1d9a44922f66b45ab189f49"
+  },
+  {
+    "audit_id": "AUD-SCAN-B8B-1791627661",
+    "scan_id": "SCAN-B8B8446C87",
+    "timestamp_iso": "2026-10-10T10:21:01Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_URL",
+    "inputs_hash": "16c14373be564b1f10926be2a2bad7677d85c371b225fb339f783a710759ae62",
+    "outputs_hash": "413c07d178d0da674c8932f072bf3c786fc4010195c6c0389b2a4d0f9264f740",
+    "verifier_signature": "3981c1780752a2496388c1143d2129c3ed3535ccf814517ad939cfe9c6141acc"
+  },
+  {
+    "audit_id": "AUD-SCAN-702-1791627558",
+    "scan_id": "SCAN-70272D598D",
+    "timestamp_iso": "2026-10-10T10:19:18Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_MEDIA",
+    "inputs_hash": "989335d79d1b6c52fd77dc190c988c57b0e57d740c920e360a0832064c7c2c22",
+    "outputs_hash": "5b64e74c20e2455de27b1df1134c6baf7959cb4b2fb488f17c8fd3c6aeb4e1f6",
+    "verifier_signature": "8a66aa654dfb972b6959aab83b9ebe15230739ea69de08cbf2a0c0604120af23"
+  },
+  {
+    "audit_id": "AUD-SCAN-93C-1791627107",
+    "scan_id": "SCAN-93CDB62C64",
+    "timestamp_iso": "2026-10-10T10:11:47Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_MEDIA",
+    "inputs_hash": "f508ee3d314e53f92edb863a94c7194cebc32ac354d4255e1bb8a34c0141de27",
+    "outputs_hash": "f661ec2b8e265a16ed84e4a8c272290ee364305a8c35fc8098865e3f544261b0",
+    "verifier_signature": "baec96a4d40bdfd6d87fe086b47a98e77efebb4596ab237340fef288620d0f47"
+  },
+  {
+    "audit_id": "AUD-SCAN-DD3-1791626892",
+    "scan_id": "SCAN-DD3FD2F610",
+    "timestamp_iso": "2026-10-10T10:08:12Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_TEXT",
+    "inputs_hash": "56b8411bf458dedad2c5270b0f50bf8b79f5b7ca65bc7dcb51673d3d7738dbbd",
+    "outputs_hash": "148203c62156c2f96dfdad35bd7b12ac5bff6e6c23ac9f8ef670773a1c221c6c",
+    "verifier_signature": "e2008de40a5ee63f1be04f4109d5c0a063f2f0ffc0d7f2009875d591a04ec694"
+  },
+  {
+    "audit_id": "AUD-SCAN-575-1791626878",
+    "scan_id": "SCAN-575C3A6C33",
+    "timestamp_iso": "2026-10-10T10:07:58Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_MEDIA",
+    "inputs_hash": "c5e5fda40f2391f33834696d342e0224a70980a8af2b882b97a835a132090a01",
+    "outputs_hash": "22c23e50eae3ef60e42838ce5d4c54f448d215915b2172e555099b3c1b58b485",
+    "verifier_signature": "3262120a1f1f7402c499f133b0b2cd376b0a5637c520f93c7e12c7dedcc4c3d5"
+  },
+  {
+    "audit_id": "AUD-SCAN-11E-1791625052",
+    "scan_id": "SCAN-11E0C99F4C",
+    "timestamp_iso": "2026-10-10T09:37:32Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_MEDIA",
+    "inputs_hash": "85973b87acec7970e80773c7fe958352d960e72c8c41111198c58354b6d466fa",
+    "outputs_hash": "3dd7d1740db5fd0006e158299086bfd16439b2cf4a27ba161d91ee2e53c3c7eb",
+    "verifier_signature": "a903b1652440f2482af0ccfe73c6d8e9ada649a36418e47f6116361f18a67078"
+  },
+  {
+    "audit_id": "AUD-SCAN-0D2-1791624316",
+    "scan_id": "SCAN-0D20E1CC6D",
+    "timestamp_iso": "2026-10-10T09:25:16Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_URL",
+    "inputs_hash": "3710761399f0a513070b40c85fe2d0ed4b66587f067e831ab52228d627fc6bcb",
+    "outputs_hash": "6807ef9a39896eb8e70453c2e8214da686941fbb4d8d9e2f42ab260d4a596ac4",
+    "verifier_signature": "943568c42d9f9834882768b2e2cc1192552fa0c55fe46880b30e063ee4323b52"
+  },
+  {
+    "audit_id": "AUD-SCAN-11C-1791624316",
+    "scan_id": "SCAN-11C829956E",
+    "timestamp_iso": "2026-10-10T09:25:16Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_URL",
+    "inputs_hash": "3710761399f0a513070b40c85fe2d0ed4b66587f067e831ab52228d627fc6bcb",
+    "outputs_hash": "6807ef9a39896eb8e70453c2e8214da686941fbb4d8d9e2f42ab260d4a596ac4",
+    "verifier_signature": "22f03a2ea318ced8570daa2fa603ca0b76375c1e380f54971510696e201791a2"
+  },
+  {
+    "audit_id": "AUD-SCAN-E2F-1791624316",
+    "scan_id": "SCAN-E2F441E3A7",
+    "timestamp_iso": "2026-10-10T09:25:16Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_URL",
+    "inputs_hash": "3710761399f0a513070b40c85fe2d0ed4b66587f067e831ab52228d627fc6bcb",
+    "outputs_hash": "6807ef9a39896eb8e70453c2e8214da686941fbb4d8d9e2f42ab260d4a596ac4",
+    "verifier_signature": "06829be8b9e8e14ccb342412008fcaf863d10f549a337c123681fb57f166c958"
+  },
+  {
+    "audit_id": "AUD-SCAN-0F7-1791624315",
+    "scan_id": "SCAN-0F7AA29981",
+    "timestamp_iso": "2026-10-10T09:25:15Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_URL",
+    "inputs_hash": "3710761399f0a513070b40c85fe2d0ed4b66587f067e831ab52228d627fc6bcb",
+    "outputs_hash": "6807ef9a39896eb8e70453c2e8214da686941fbb4d8d9e2f42ab260d4a596ac4",
+    "verifier_signature": "40742800fa68dfed693bb9ce4647d2670f956e41664da8598bb79f62cd1a6e81"
+  },
+  {
+    "audit_id": "AUD-SCAN-539-1791624309",
+    "scan_id": "SCAN-5391BBDB16",
+    "timestamp_iso": "2026-10-10T09:25:09Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_URL",
+    "inputs_hash": "3710761399f0a513070b40c85fe2d0ed4b66587f067e831ab52228d627fc6bcb",
+    "outputs_hash": "6807ef9a39896eb8e70453c2e8214da686941fbb4d8d9e2f42ab260d4a596ac4",
+    "verifier_signature": "708faafb438518eae9ad5fd2261412c6d3a3918c0526a4dd98dbd12aafbdc579"
+  },
+  {
+    "audit_id": "AUD-SCAN-92D-1791624297",
+    "scan_id": "SCAN-92DDB0A5CD",
+    "timestamp_iso": "2026-10-10T09:24:57Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_MEDIA",
+    "inputs_hash": "85973b87acec7970e80773c7fe958352d960e72c8c41111198c58354b6d466fa",
+    "outputs_hash": "3dd7d1740db5fd0006e158299086bfd16439b2cf4a27ba161d91ee2e53c3c7eb",
+    "verifier_signature": "451b1965d8a79ef37377a811f9ba30a62d27554dbc860ba040cc6d41eec986b4"
+  },
+  {
+    "audit_id": "AUD-SCAN-DCE-1791624237",
+    "scan_id": "SCAN-DCE6E1EE39",
+    "timestamp_iso": "2026-10-10T09:23:57Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_MEDIA",
+    "inputs_hash": "85973b87acec7970e80773c7fe958352d960e72c8c41111198c58354b6d466fa",
+    "outputs_hash": "3dd7d1740db5fd0006e158299086bfd16439b2cf4a27ba161d91ee2e53c3c7eb",
+    "verifier_signature": "691a3e371d8c73bffb7505d87e9ea8a99f1f03093cd854b78d5cf7fa34570ac5"
+  },
+  {
+    "audit_id": "AUD-SCAN-0BF-1791623993",
+    "scan_id": "SCAN-0BF68249C7",
+    "timestamp_iso": "2026-10-10T09:19:53Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_URL",
+    "inputs_hash": "b2d748c083fc1f207d0048238ab304b7e4177462fb22ff0ef0c7bd1416bed54f",
+    "outputs_hash": "92218650d00e163c62cb5b551f138197089a05913ad61967b57265aa2b7e0bba",
+    "verifier_signature": "3873d1c62b05847f01f37f574e19e3e97e421c5c0b909f8a6651d64ff61ddcd7"
+  },
+  {
+    "audit_id": "AUD-SCAN-945-1791623954",
+    "scan_id": "SCAN-9457A2F7DB",
+    "timestamp_iso": "2026-10-10T09:19:14Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_URL",
+    "inputs_hash": "742da3834e6a902fd34ccb206eb352159d2d8a65f4f31d1199b7365c3243c67e",
+    "outputs_hash": "92218650d00e163c62cb5b551f138197089a05913ad61967b57265aa2b7e0bba",
+    "verifier_signature": "fc64bd789f006cc5c50b4dcb58725ba5838416cf164d635ffbeb71e152782a8e"
+  },
+  {
+    "audit_id": "AUD-SCAN-4C7-1791623927",
+    "scan_id": "SCAN-4C76176C85",
+    "timestamp_iso": "2026-10-10T09:18:47Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_URL",
+    "inputs_hash": "b2d748c083fc1f207d0048238ab304b7e4177462fb22ff0ef0c7bd1416bed54f",
+    "outputs_hash": "75bca72d0974d8c409ed04d03deb306223be20a667f53f6a60e38ac68dc206ec",
+    "verifier_signature": "c56198df0c5991a300d72ff61174b4c0a31055d6376ce0c41e87cac7c5348457"
+  },
+  {
+    "audit_id": "AUD-SCAN-6C2-1791623873",
+    "scan_id": "SCAN-6C2609C0D3",
+    "timestamp_iso": "2026-10-10T09:17:53Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_URL",
+    "inputs_hash": "b2d748c083fc1f207d0048238ab304b7e4177462fb22ff0ef0c7bd1416bed54f",
+    "outputs_hash": "75bca72d0974d8c409ed04d03deb306223be20a667f53f6a60e38ac68dc206ec",
+    "verifier_signature": "0aa2edef751639e5d18fd2cbf7c1c99069c446547720be2c9a3e6cc1953f1802"
+  },
+  {
+    "audit_id": "AUD-SCAN-48A-1791623838",
+    "scan_id": "SCAN-48AF3612CC",
+    "timestamp_iso": "2026-10-10T09:17:18Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_URL",
+    "inputs_hash": "b2d748c083fc1f207d0048238ab304b7e4177462fb22ff0ef0c7bd1416bed54f",
+    "outputs_hash": "75bca72d0974d8c409ed04d03deb306223be20a667f53f6a60e38ac68dc206ec",
+    "verifier_signature": "7d2e3a1424256bb85a75f6665991fe3768ab64b84be04f253274f812883aad39"
+  },
+  {
+    "audit_id": "AUD-SCAN-8C4-1791623794",
+    "scan_id": "SCAN-8C40CF7BC9",
+    "timestamp_iso": "2026-10-10T09:16:34Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_URL",
+    "inputs_hash": "b2d748c083fc1f207d0048238ab304b7e4177462fb22ff0ef0c7bd1416bed54f",
+    "outputs_hash": "75bca72d0974d8c409ed04d03deb306223be20a667f53f6a60e38ac68dc206ec",
+    "verifier_signature": "3342d1ab1ca325a3152a7f51f99239d7460ac05a9b49172be20fe341366b8bae"
+  },
+  {
+    "audit_id": "AUD-SCAN-287-1791623740",
+    "scan_id": "SCAN-28710FC718",
+    "timestamp_iso": "2026-10-10T09:15:40Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_URL",
+    "inputs_hash": "b2d748c083fc1f207d0048238ab304b7e4177462fb22ff0ef0c7bd1416bed54f",
+    "outputs_hash": "75bca72d0974d8c409ed04d03deb306223be20a667f53f6a60e38ac68dc206ec",
+    "verifier_signature": "f46d486aacdf22dee8f283c04f464693410a0b0f6a24d853394dad7a34e8e632"
+  },
+  {
+    "audit_id": "AUD-SCAN-B4C-1791623580",
+    "scan_id": "SCAN-B4C4AA1E48",
+    "timestamp_iso": "2026-10-10T09:13:00Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_TEXT",
+    "inputs_hash": "bbd8de2bd9fbcb4e869af3ab9f09a161bc1702f392489e5154ede25fc90b199e",
+    "outputs_hash": "def9b145aa9661342808eeeb011cc31cd403c8e292f83a580a18002673045897",
+    "verifier_signature": "ec47e262861e193736474c57eae9205d607d7fe19bc636f872b1787da0d1fe37"
+  },
+  {
+    "audit_id": "AUD-SCAN-72A-1791623366",
+    "scan_id": "SCAN-72A335E083",
+    "timestamp_iso": "2026-10-10T09:09:26Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_MEDIA",
+    "inputs_hash": "7c4e677565a7f6c7e81ee77616d5130f23fef46ba5562127eae0ffb6d255d285",
+    "outputs_hash": "762a611c09b58f708bf1023a2ed92881c87304d0e39f4594adb1cd782a46f52d",
+    "verifier_signature": "d003c0cb8024baee0d296d27556db5509e6abbc1a6c09e6c4267ce27990f0836"
+  },
+  {
+    "audit_id": "AUD-SCAN-4E6-1791623355",
+    "scan_id": "SCAN-4E6DAF9FCD",
+    "timestamp_iso": "2026-10-10T09:09:15Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_TEXT",
+    "inputs_hash": "d7656c3ba010c936555e8ed8727aaaea0888a638cfe6938785528972b38c0dda",
+    "outputs_hash": "def9b145aa9661342808eeeb011cc31cd403c8e292f83a580a18002673045897",
+    "verifier_signature": "dffcf333f8951514cae9bd8514389567b793020f55728f577e4d9b4d5524b0a5"
+  },
+  {
+    "audit_id": "AUD-SCAN-5E7-1791623114",
+    "scan_id": "SCAN-5E706B9058",
+    "timestamp_iso": "2026-10-10T09:05:14Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_TEXT",
+    "inputs_hash": "1280022f83cd45590f12d9c67d230ddd63f45ec9bf06d9bc28085f52f0d0b9dc",
+    "outputs_hash": "def9b145aa9661342808eeeb011cc31cd403c8e292f83a580a18002673045897",
+    "verifier_signature": "5f6174c45bf0939e59bb26d942628943476018af366ea3ed1330761395b745db"
+  },
+  {
+    "audit_id": "AUD-SCAN-0E5-1791623114",
+    "scan_id": "SCAN-0E546E4FA8",
+    "timestamp_iso": "2026-10-10T09:05:14Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_MEDIA",
+    "inputs_hash": "3a7ea64473a8c21a9d6517b511c13de3e4f8093f2a8588ba11c8cd55a3b864cc",
+    "outputs_hash": "762a611c09b58f708bf1023a2ed92881c87304d0e39f4594adb1cd782a46f52d",
+    "verifier_signature": "1c6e230ca703cb52d5a5305e85429622f5afe1dd6f6f421ee4dd8302db815a99"
+  }
+]

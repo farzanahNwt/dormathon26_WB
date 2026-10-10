@@ -1,0 +1,20 @@
+/* LAICIs V3: editorial lychee / cybersecurity design */
+:root{--v3-bg:#F6EBEF;--v3-paper:#FFF8FA;--v3-plum:#230B18;--v3-maroon:#71223D;--v3-rose:#C76182;--v3-light:#EFBDC9}
+body{background:var(--v3-bg)}.nav{background:rgba(246,235,239,.95)}
+.hero{background:radial-gradient(ellipse at 81% 30%,rgba(197,97,130,.18),transparent 35%),linear-gradient(155deg,#f5e8ec,#f8f0f3)}
+.hero:before,.scanner-section:before{content:"";pointer-events:none;position:absolute;right:-170px;top:40px;width:510px;height:510px;border:1px solid rgba(113,34,61,.13);border-radius:50%;box-shadow:0 0 0 62px rgba(197,97,130,.035),0 0 0 124px rgba(197,97,130,.025)}
+.hero h1{font-size:clamp(90px,11.7vw,214px)}.hero .eyebrow{color:#653449}
+.mascot{background-image:radial-gradient(rgba(82,14,34,.32) 1.7px,transparent 2px);background-color:#d97797;box-shadow:inset 0 0 0 15px rgba(255,255,255,.12),inset -35px -30px 45px rgba(81,9,32,.14),0 25px 80px rgba(100,20,48,.18)}
+.wordmark:hover .logo-mark{transform:rotate(-9deg)}.logo-mark{transition:transform .35s}.outlined-ring:after{border-color:#852a48}
+.hero-bottom p{max-width:470px}.features,.platforms-v3{background:linear-gradient(165deg,#260B1A,#120710)}.features h2{font-size:clamp(56px,7vw,108px)}
+.features .diagram{background:radial-gradient(circle at 45% 35%,#4e1a33,#180711)}
+.platforms-v3{min-height:770px}.v3-display{font-size:clamp(75px,10vw,164px);letter-spacing:-.095em;line-height:.95;margin:70px 0 55px}.v3-display span{color:#e7acc1}
+.platform-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.platform-card{display:flex;flex-direction:column;min-height:350px;padding:28px;border:1px solid rgba(255,255,255,.18);border-radius:24px;background:rgba(255,255,255,.04);transition:transform .22s,background .22s}.platform-card:hover{transform:translateY(-7px);background:rgba(255,255,255,.09)}.platform-card>span,.platform-card b{font:500 12px 'DM Mono',monospace;letter-spacing:.12em;color:#e7acc1}.platform-card .platform-symbol{font-size:58px;color:#efbfd0;margin:38px 0 15px}.platform-card h3{font-size:30px;letter-spacing:-.055em;margin:0}.platform-card p{font-size:15px;line-height:1.55;color:#e3cbd5;margin-bottom:35px}.platform-card b{margin-top:auto}
+.scanner-section{background:#f6e9ee}.scanner-header h2{font-size:clamp(70px,8.5vw,142px)}.scan-card{box-shadow:0 28px 80px rgba(71,14,34,.16)}.dropzone{background:rgba(255,255,255,.02)}.dropzone:hover{border-color:#fff0f5}.scan-pipeline{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}.pipeline-step{font:10px 'DM Mono',monospace;letter-spacing:1px;border:1px solid #8b5064;color:#ffd0df;padding:9px;border-radius:9px;opacity:.55}.pipeline-step.active{opacity:1;background:#693047;border-color:#e2aec0}.pipeline-step.done{opacity:1;background:#275d45;border-color:#91c7ac}.scan-result{padding:16px 18px;background:#4d2031;border:1px solid #995775;border-radius:14px;color:#fff2f6;line-height:1.6;overflow-wrap:anywhere}.scan-result strong{color:#ffd6e4}
+.case-grid article{background:rgba(255,255,255,.48);transition:transform .2s}.case-grid article:hover{transform:translateY(-6px)}.case-grid h3{font-size:clamp(26px,3vw,40px)}.end{background:linear-gradient(140deg,#f6e9ee,#edcfda)}
+.mascot{animation:bob 4s ease-in-out infinite,mascot-turn 15s ease-in-out infinite}@keyframes mascot-turn{0%,100%{rotate:-4deg}50%{rotate:7deg}}
+@media(max-width:900px){.platform-cards{grid-template-columns:1fr}.platform-card{min-height:250px}.platform-card .platform-symbol{margin:16px 0}.platforms-v3{display:block;min-height:0}.v3-display{font-size:clamp(58px,11vw,100px)}}
+@media(max-width:800px){.platforms-v3{display:block}.platform-cards{grid-template-columns:1fr}.platform-card{min-height:220px}.v3-display{margin:40px 0;font-size:clamp(58px,12vw,86px)}.platform-card p{margin-bottom:15px}.hero:before{width:260px;height:260px;right:-140px}.hero{min-height:640px}.hero h1{font-size:clamp(69px,15vw,120px)}}
+@media(prefers-reduced-motion:reduce){.mascot{animation:none}}
+
+[hidden]{display:none!important}

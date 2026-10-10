@@ -1,0 +1,11 @@
+{
+  "record_id": "FIN-MY-2026",
+  "period": "2026-YTD",
+  "total_scans_evaluated": 177,
+  "scams_intercepted_count": 107,
+  "total_exposure_rm": 4908560.92,
+  "total_prevention_value_rm": 1228129.47,
+  "average_case_loss_rm": 38500.0,
+  "high_risk_percentage": 65.6,
+  "last_updated": "2026-10-10T11:35:04Z"
+}

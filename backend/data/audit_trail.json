@@ -1,5 +1,25 @@
 [
   {
+    "audit_id": "AUD-SCAN-7D2-1791639384",
+    "scan_id": "SCAN-7D2312BD0A",
+    "timestamp_iso": "2026-10-10T13:36:24Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_MEDIA",
+    "inputs_hash": "5f109b33cda3e4171837ef98013d2bc436cee86031004a4c8b2f9717f592046a",
+    "outputs_hash": "3da694126c8334221c4e91cde41c4b181455c6955dacca000d9a77e73a1c2d70",
+    "verifier_signature": "df37ae336a8191493d4f1b2ab5ac692906b0cf6e4578b1abe74fa6b3676b6cf3"
+  },
+  {
+    "audit_id": "AUD-SCAN-415-1791639322",
+    "scan_id": "SCAN-415656A2BD",
+    "timestamp_iso": "2026-10-10T13:35:22Z",
+    "agent_version": "LAICIs-v2.0-WorkBuddy-Track2",
+    "action": "INVESTIGATION_TEXT",
+    "inputs_hash": "26879796c243b58adf56d71d59d62afda5a336139d3ddef945ac49f584338215",
+    "outputs_hash": "d63bc052ff885d5519a6c57d3bbc132cee6b00700b6de3eaf00d15f9e878d98f",
+    "verifier_signature": "d70c5b0fe8134da7ba9065a7fc0b677a321b79471414e6f5e97bb9f45a040b9b"
+  },
+  {
     "audit_id": "AUD-SCAN-BE6-1791632104",
     "scan_id": "SCAN-BE6F7DAAC9",
     "timestamp_iso": "2026-10-10T11:35:04Z",

@@ -154,6 +154,7 @@ class WorkBuddyInvestigationAgent:
         # Return standardized response conforming exactly to TRACK2-INTEGRATION.md contract
         return {
             "status": "completed",
+            "scan_id": scan_id,
             "summary": delivery["summary"],
             "message": delivery["message"],
             "tools": executed_tools,

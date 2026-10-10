@@ -1,0 +1,30 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "outputDirectory": "frontend",
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/uploads/(.*)",
+      "destination": "https://YOUR-TENCENT-BACKEND-URL/uploads/$1"
+    },
+    {
+      "source": "/api/(.*)",
+      "destination": "https://YOUR-TENCENT-BACKEND-URL/api/$1"
+    }
+  ]
+}

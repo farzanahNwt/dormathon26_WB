@@ -90,7 +90,9 @@ class ELAAnalyzer:
             base_filename = os.path.basename(image_path)
             clean_name = os.path.splitext(base_filename)[0]
             ela_filename = f"ela_{clean_name}.jpg"
-            ela_disk_path = os.path.join(os.path.dirname(image_path), ela_filename)
+            upload_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "uploads"))
+            os.makedirs(upload_dir, exist_ok=True)
+            ela_disk_path = os.path.join(upload_dir, ela_filename)
             ela_image_url = None
             try:
                 ela_image.save(ela_disk_path, format="JPEG", quality=90)

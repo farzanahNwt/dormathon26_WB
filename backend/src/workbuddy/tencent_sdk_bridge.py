@@ -8,12 +8,38 @@ Natively integrates with Tencent's official agent framework:
 
 import os
 from typing import Dict, Any, List
-from codebuddy_agent_sdk import (
-    tool,
-    create_sdk_mcp_server,
-    AgentDefinition,
-    CallToolResult
-)
+try:
+    from codebuddy_agent_sdk import (
+        tool,
+        create_sdk_mcp_server,
+        AgentDefinition,
+        CallToolResult
+    )
+except ImportError:
+    # Graceful fallback when codebuddy_agent_sdk is not in environment
+    def tool(name=None, description=None, input_schema=None):
+        def decorator(fn):
+            fn._tool_name = name or fn.__name__
+            fn._tool_description = description or ""
+            fn._tool_input_schema = input_schema or {}
+            return fn
+        return decorator
+
+    class AgentDefinition:
+        def __init__(self, description, prompt, tools):
+            self.description = description
+            self.prompt = prompt
+            self.tools = tools
+
+    def create_sdk_mcp_server(name, version, tools):
+        return {
+            "name": name,
+            "version": version,
+            "tools": [getattr(t, "_tool_name", str(t)) for t in tools],
+            "type": "sdk"
+        }
+
+    CallToolResult = Dict[str, Any]
 
 from ..detection.ela_analyzer import ELAAnalyzer
 from ..detection.pytorch_detector import PyTorchDetector
